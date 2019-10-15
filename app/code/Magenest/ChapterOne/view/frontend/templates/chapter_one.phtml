@@ -1,0 +1,40 @@
+<?php
+    $items = $block->getAllItemsPending();
+?>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<h2>Chapter One Table</h2>
+
+<table>
+    <tr>
+        <th style=" text-align: center">ID</th>
+        <th style=" text-align: center">Title</th>
+        <th style=" text-align: center">Status</th>
+        <th style=" text-align: center">Rule Type</th>
+        <th style=" text-align: center">Condition Serialized</th>
+    </tr>
+    <?php foreach ($items as $item){ ?>
+    <tr>
+        <th style=" text-align: center"><?= $item->getId();?></th>
+        <th style=" text-align: center"><?= $item->getTitle();?></th>
+        <th style=" text-align: center"><?= $item->getStatus();?></th>
+        <th style=" text-align: center"><?= $item->getRuleType();?></th>
+        <th style=" text-align: center"><?= $item->getConditionsSerialized();?></th>
+    </tr>
+    <?php } ?>
+</table>
