@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+            <referenceBlock name="header-wrapper" label="Page Header" as="header-wrapper" htmlTag="div" htmlClass="header content">
+                    <block class="Magenest\ChapterTwo\Block\Clock\Config" template="Magenest_ChapterTwo::clock.phtml"/>
+            </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="10">
+            <label>Magenest</label>
+        </tab>
+        <section id="clock_configuration" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Clock Configuration</label>
+            <tab>magenest</tab>
+            <resource>Magenest_ChapterTwo::clock_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Default Configuration</label>
+                <field id="clock_title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Clock Title</label>
+                </field>
+                <field id="size_clock" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Size Clock</label>
+                    <source_model>Magenest\ChapterTwo\Model\Clock\Source\SizeClock</source_model>
+                </field>
+                <field id="color_clock" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Color Clock</label>
+                    <frontend_model>Magenest\ChapterTwo\Block\Color</frontend_model>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+                    <frontend_model>Magenest\ChapterTwo\Block\Color</frontend_model>
+                </field>
+                <field id="clock_type" translate="label" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Clock Type</label>
+                    <frontend_model>Magenest\ChapterTwo\Block\Adminhtml\Form\Field\ColorType</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
