@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="magenest">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string">Magenest ChapterFour Select Date</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="dataScope" xsi:type="string">data.magenest</item>
+                <item name="sortOrder" xsi:type="number">2</item>
+            </item>
+        </argument>
+        <field name="start_date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Time</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">date</item>
+                    <item name="dataScope" xsi:type="string">time_field</item>
+                    <item name="component" xsi:type="string">Magenest_ChapterFour/js/form/element/time</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>
