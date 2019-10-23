@@ -20,7 +20,7 @@ class CustomColumn extends \Magento\Ui\Component\Listing\Columns\Column
     public function prepare()
     {
         parent::prepare();
-        $adminName = $this->authSession->getUser()->getUserName();
+        $adminName = $this->authSession->getUser()->getFirstName();
         $firstChar = substr($adminName,0,1);
         if ((($firstChar >= 'a' && $firstChar <= 'm') || ($firstChar >= "A" && $firstChar <= "M")) == true ) {
             $this->_data['config']['componentDisabled'] = false;
