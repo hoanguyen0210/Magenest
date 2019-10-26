@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magenest_ChapterSix::chapter_six" title="Chapter Six" module="Magenest_ChapterSix" sortOrder="51" resource="Magenest_ChapterSix::chapter_six"/>
+        <add id="Magenest_ChapterSix::one" title="Exam 1" module="Magenest_ChapterSix" sortOrder="10" parent="Magenest_ChapterSix::chapter_six" action="chapter_six/exam/one" resource="Magenest_ChapterSix::exam_one"/>
+        <add id="Magenest_ChapterSix::two" title="Exam 2" module="Magenest_ChapterSix" sortOrder="99" parent="Magenest_ChapterSix::chapter_six" action="chapter_six/exam/two" resource="Magenest_ChapterSix::exam_two"/>
+        <add id="Magenest_ChapterSix::three" title="Exam 3" module="Magenest_ChapterSix" sortOrder="99" parent="Magenest_ChapterSix::chapter_six" action="chapter_six/exam/three" resource="Magenest_ChapterSix::three"/>
+    </menu>
+</config>

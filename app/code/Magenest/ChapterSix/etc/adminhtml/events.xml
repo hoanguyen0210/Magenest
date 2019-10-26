@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="chapter_six_exam_add">
+        <observer name="before_save_rules" instance="Magenest\ChapterSix\Observer\RulesBeforeSave" />
+    </event>
+</config>

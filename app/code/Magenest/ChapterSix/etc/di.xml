@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="chapter_six_exam_three_listing_data_source" xsi:type="string">Magenest\ChapterOne\Model\ResourceModel\Rules\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Magenest\ChapterOne\Model\ResourceModel\Rules\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">magenest_rules</argument>
+            <argument name="resourceModel" xsi:type="string">Magenest\ChapterOne\Model\ResourceModel\Rules</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Magenest\ChapterSix\Api\CustomRepositoryInterface"
+                type="Magenest\ChapterSix\Model\CustomRepository" />
+    <preference for="Magenest\ChapterSix\Api\Data\CustomInterface"
+                type="Magenest\ChapterSix\Model\Custom" />
+    <preference for="Magenest\ChapterSix\Api\Data\CustomSearchResultsInterface"
+                type="Magento\Framework\Api\SearchResults" />
+</config>
